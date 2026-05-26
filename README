@@ -1,0 +1,16 @@
+[UPDATE TERBARU]
+1. Membuat backend login dan register
+2. Membuat database
+3. Merapikan susunan file
+4. Menambahkan file enkripsi (biarkan dan jangan dimodifikasi terlebih dahulu)
+5. Mengubah koneksi ke database local (Daniel)
+6. Menambahkan error notifikasi
+
+[NOTE]
+Ubah koneksi database ke localnya masing-masing
+Pastikan dulu untuk mengimpor database yang sudah ada
+
+-Daniel-
+
+[THANK YOU]
+

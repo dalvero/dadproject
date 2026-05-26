@@ -1,0 +1,417 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* CSS VARIABEL */
+:root{
+    /* COLORS */
+    --primary-color: #0F172A;
+    --secondary-color: #9333EA;
+    --tertiary-color: #BE185D;
+    --fourtiary-color: #C084FC;
+    --quinary-color: #581C87;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+
+    /* FONT & TYPOGRAPHY */
+    /* .5rem = 8px | 1rem = 16px */
+
+    --body-font: 'Inter', sans-serif;
+    --big--font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --tiny-font-size: .688rem;
+
+    /* FONT WEIGHT */
+    --font-regular: 500;
+    --font-medium: 600;
+    --font-semi-bold: 700;
+
+    /* Z INDEX */
+    --z-tooltop : 10;
+    --z-fixed: 100;
+}
+
+/* RESPONSIVE TYPOGRAPHY */
+@media screen and (min-width: 1150px){
+    :root{
+        --big--font-size: 3rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --tiny-font-size: .75rem;
+    }
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body, input, button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    overflow: hidden;
+}
+
+input, button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1300px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom */
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding-inline: 1.5rem;
+}
+
+.register h1{
+    font-size: var(--big--font-size);
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register h2{
+    font-size: 1.5rem;
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.leftSection{
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+    color: white;
+}
+
+.leftSection .title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.leftSection .subTitle{
+    text-align: center;    
+}
+
+.registSvg {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.register{
+    position: relative;
+    height: 100vh;
+    align-items: center;;
+}
+
+.containerForm{
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto; /* Dorong ke kanan */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem 2rem 0.25rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+}
+
+
+.registerForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    background-color: #1C2435 ;  
+    z-index: 0;  
+}
+
+.registerBox{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0 auto;
+    background-color: var(--tertiary-color);
+}
+
+.registerInput{
+    width: 100%;
+    padding: 1.25rem 2.25rem 1.25rem 1rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 1rem;
+    border: 2px solid var(--primary-color);    
+    transition: border-color 0.4s;    
+    color: white;
+    
+}
+
+.labelSelect{
+    width: 100%;
+    padding: 1.25rem 2.25rem 1.25rem 1rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 1rem;
+    border: 2px solid var(--primary-color);
+    z-index: 1;
+    transition: border-color 0.4s;    
+}
+
+.statusBox{
+    width: 30%;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--primary-color);
+    z-index: 1;
+    background-color: #323A4C;
+}
+
+.registerInput:autofill{
+    transition: background-color 6000s, color 6000s;
+}
+
+.registerInput:focus{
+    background-color: #323A4C;
+}
+
+.registerInput:focus ~ .registerLabel{
+    transform: translateY(-20px);
+    font-size: var(--tiny-font-size);
+    
+}
+
+.registerInput:not(:placeholder-shown).registerInput:not(:focus) ~ .registerLabel{
+    transform: translateY(-20px);
+    font-size: var(--tiny-font-size);
+}
+
+.registerInput:not(:placeholder-shown).registerInput:not(:focus){
+    border-color: var(--primary-color);
+}
+
+.registerLabel {
+    position: absolute;
+    left: 1.25rem;
+    font-weight: var(--font-semi-bold);
+    transition: transform 0.4s, font-size .4s, color .4s;
+    color: var(--primary-color);
+    z-index: 1;
+}
+
+.registIcon{
+    position: absolute;
+    font-size: 1.25rem;
+    right: 1rem;
+    transition: color .4s;
+    color: var(--primary-color);
+    z-index: 1;
+}
+
+.registerBox .labelSelect{
+    padding: 1rem 0.5rem 1rem 1.25rem;
+    font-weight: var(--font-semi-bold);
+    transition: transform 0.4s, font-size .4s, color .4s;
+    color: var(--primary-color);
+    z-index: 1;
+}
+
+.registerBox .statusBox{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.25rem;
+    transition: color .4s;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border: none;
+    z-index: 1;
+}
+
+.statusBox:focus{
+    border: none;
+}
+
+.registerBox{
+    background-color: white;
+}
+
+.registButton{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #C084FC ;
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    font-size: 1.2rem;
+    padding-block: 1rem;
+    border-radius: 4rem;
+    margin: 0.8rem 2rem 2rem 2rem;
+    margin-bottom: 2.25rem;
+    cursor: pointer;
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.registButton:hover{
+    background-color: var(--secondary-color);
+    box-shadow: 0 8px 24px rgba(0, 0%, 0%, 0.2);
+}
+
+.registerBox .loginBox{
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.loginBox a{
+    color: var(--primary-color);
+    font-weight: var(--font-semi-bold);
+    transition: transform 0.4s, color .4s ease-in-out;
+}
+
+.loginBox a:hover{
+    transform: scale(1.4);
+    color: var(--secondary-color);
+}
+
+
+.toast {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #f8d7da;
+    color: black;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--primary-color);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 10;
+}
+
+.toast.active{
+    z-index: 10;
+    transform: translateX(0%);
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    z-index: 10;
+}
+
+.message .text{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    color: var(--primary-color);
+    z-index: 10;
+}
+
+.message .text.text-1{
+    font-weight: var(--font-semi-bold);
+    z-index: 10;
+}
+
+.toast .close{
+    position: absolute;
+    font-weight: var(--font-semi-bold);
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.toast .close:hover{
+    opacity: 1;
+    z-index: 10;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #f8d7da;
+    z-index: 10;
+}
+
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--primary-color);
+    z-index: 10;
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+    z-index: 10;
+
+}
+
+@keyframes progress{
+    100%{
+        right: 100%;
+    }
+}

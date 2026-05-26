@@ -1,0 +1,25 @@
+# Dependencies
+vendor/
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Uploads (jangan commit file user upload)
+content/*
+!content/.gitkeep

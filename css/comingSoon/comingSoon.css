@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8fafc; 
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='350' height='200'%3e%3ctext x='50%25' y='60%25' font-family='Poppins, sans-serif' font-size='28' font-weight='700' fill='%23e2e8f0' text-anchor='middle' transform='rotate(-30 175 100)'%3eCOMING SOON%3c/text%3e%3c/svg%3e");
+}
+
+.content-box {
+    background: #FFFFFF; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 20px;
+    padding: 40px 50px;
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1); 
+}
+
+.icon {
+    width: 80px; 
+    height: 80px;
+    display: inline-block;
+    animation: float 4s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #581C87, #9333EA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #0F172A; 
+    opacity: 0.8;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFFFFF;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #9333EA, #BE185D);
+    box-shadow: 0 5px 20px rgba(147, 51, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(189, 24, 93, 0.5);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        background-image: none;
+        background-color: #f8fafc;
+    }
+    .content-box {
+        padding: 30px 25px;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 70px; 
+        height: 70px;
+    }
+
+    .btn-back {
+        padding: 12px 35px;
+    }
+}

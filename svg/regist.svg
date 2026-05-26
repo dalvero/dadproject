@@ -1,0 +1,12 @@
+<svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <clipPath id="blobClip">
+        <path d="M22.4,-39.2C28.3,-35.4,31.8,-27.9,33.7,-20.7C35.5,-13.6,35.7,-6.8,35.8,0.1C35.9,6.9,35.9,13.8,33.3,19.7C30.7,25.5,25.5,30.3,19.5,34.7C13.5,39.1,6.8,43.1,0.4,42.5C-6,41.9,-12.1,36.6,-19,32.8C-25.9,28.9,-33.7,26.4,-36.7,21.2C-39.7,16,-37.9,8,-38,0C-38,-8.1,-40,-16.1,-36.8,-21.1C-33.7,-26.2,-25.6,-28.2,-18.6,-31.3C-11.6,-34.5,-5.8,-38.8,1.2,-40.9C8.2,-43,16.5,-42.9,22.4,-39.2Z"
+          transform="translate(50 50)" />
+      </clipPath>
+    </defs>
+  
+    <!-- Gambar yang ditempel di dalam bentuk blob -->
+    <image href="your-image.jpg" x="0" y="0" width="100" height="100" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice" />
+  </svg>
+  
