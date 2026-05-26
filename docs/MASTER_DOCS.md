@@ -696,6 +696,3 @@ Memerlukan setup Google Cloud Console:
 - Redirect URI harus sesuai dengan URL aplikasi
 
 ---
-
-> **Last updated:** 2026-05-26
-> **Documented by:** Claude Code
